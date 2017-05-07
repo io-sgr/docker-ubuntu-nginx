@@ -18,7 +18,7 @@ EXPOSE 80 443
 
 COPY files /etc/nginx/
 
-HEALTHCHECK --interval=10s --timeout=5s --retries=10 CMD curl --insecure https://localhost/ping || exit 1
+HEALTHCHECK --interval=10s --timeout=5s --retries=10 CMD curl --insecure https://127.0.0.1/ping || exit 1
 
 WORKDIR /etc/nginx
 
